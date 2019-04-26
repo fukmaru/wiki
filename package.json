@@ -1,0 +1,11 @@
+{
+  "name": "wiki",
+  "private": true,
+  "dependencies": {
+    "@rails/webpacker": "^4.0.2",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.3.1"
+  }
+}
