@@ -42,6 +42,8 @@ group :development do
 
   gem 'foreman'
   gem 'annotate'
+  gem 'faker'
+  gem 'rb-readline'
 end
 
 group :test do

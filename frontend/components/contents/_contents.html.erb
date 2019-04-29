@@ -1,0 +1,17 @@
+<div class="contents js-contents">
+  <table class="contents--table js-contents--table table is-fullwidth">
+    <thead>
+    <tr>
+      <th><abbr title="Id">#</abbr></th>
+      <th><addr title="Title">Title</addr></th>
+      <th><addr title="Body">Body</addr></th>
+      <th><addr title="IsPublished">Published?</addr></th>
+    </tr>
+    </thead>
+    <tbody>
+    <% contents.each do |content| %>
+      <%= c("content", content: content) %>
+    <% end %>
+    </tbody>
+  </table>
+</div>
