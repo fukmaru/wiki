@@ -1,0 +1,31 @@
+<%= form_with model: content do |form| %>
+  <section class="modal-card-body">
+    <div class="field">
+      <label class="label">タイトル</label>
+      <div class="control">
+        <%= form.text_field :title, class: "input", placeholder: "Poii.ioはどんなサービスですか？" %>
+      </div>
+      <p class="help">タイトルを設定します。</p>
+    </div>
+
+    <div class="field">
+      <label class="label">本文</label>
+      <div class="control">
+        <%= form.text_area :body, class: "textarea", rows: "3", placeholder: "Poii.ioとは、Wikiサービスです。様々なチャネルから検索することができます。" %>
+      </div>
+      <p class="help">本文を設定します。</p>
+    </div>
+
+    <div class="field">
+      <div class="control">
+        <label class="checkbox">
+          <%= form.check_box :is_published %>
+          公開しますか？
+        </label>
+      </div>
+    </div>
+  </section>
+  <footer class="modal-card-foot">
+    <%= form.submit content.id.present? ? "編集" : "作成", class: "button is-success" %>
+  </footer>
+<% end %>

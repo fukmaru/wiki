@@ -1,0 +1,17 @@
+.contents { /* ボタンがテーブルにかからないように */
+    padding-bottom: 60px;
+
+    &--create-button { /* ボタンを右下に固定 */
+         position: fixed;
+         bottom: 5px;
+         right: 5px;
+         padding: 6px 10px;
+
+        &--circle { /* ボタンを丸にして、中の「+」テキストをちょっと大きく */
+             height: 60px;
+             width: 60px;
+             border-radius: 50%;
+             font-size: 1.5em;
+        }
+    }
+}

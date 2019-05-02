@@ -3,15 +3,32 @@
     <thead>
     <tr>
       <th><abbr title="Id">#</abbr></th>
-      <th><addr title="Title">Title</addr></th>
-      <th><addr title="Body">Body</addr></th>
-      <th><addr title="IsPublished">Published?</addr></th>
+      <th><addr title="Title">タイトル</addr></th>
+      <th><addr title="Body">本文</addr></th>
+      <th><addr title="IsPublished">公開</addr></th>
+      <th></th>
+      <th></th>
     </tr>
     </thead>
-    <tbody>
+    <tbody class="contents--table--content-row js-contents--table--content-row">
     <% contents.each do |content| %>
       <%= c("content", content: content) %>
     <% end %>
     </tbody>
   </table>
+
+  <div class="contents--create-button js-contents--create-button">
+    <%= link_to "+", new_content_path, remote: true, class: "contents--create-button--circle js-contents--create-button--circle button is-primary" %>
+  </div>
+
+  <div class="contents-content-modal js-contents-content-modal modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">コンテンツ</p>
+        <button class="delete js-content-form--close-button"></button>
+      </header>
+      <div class="contents--content-form js-contents--content-form"></div>
+    </div>
+  </div>
 </div>

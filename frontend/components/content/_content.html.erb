@@ -1,6 +1,8 @@
-<tr class="content content--row">
+<tr class="content content--row js-content-row js-content-row--<%= content.id %>">
   <th><%= content.id %></th>
   <td><%= content.title %></td>
   <td><%= content.body %></td>
   <td><%= content.is_published %></td>
+  <td><%= link_to "編集", edit_content_path(content), remote: true, class: "button is-success is-small" %></td>
+  <td><%= link_to "削除", content_path(content), method: :delete, class: "button is-danger is-small" %></td>
 </tr>
