@@ -10,5 +10,19 @@
     "tool"],
   "addons": [
     "heroku-postgresql"
-  ]
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "heroku/ruby"
+    }
+  ],
+  "engines": {
+    "yarn": "1.x"
+  },
+  "scripts": {
+    "postinstall": "cd ./frontend && yarn && yarn run webpack --config ./webpack.config.js --mode production"
+  }
 }
