@@ -1,0 +1,20 @@
+<section class="content-search-form js-content-search-form hero">
+  <div class="content-search-form--hero-body js-content-search-form--hero-body hero-body">
+    <div class="container">
+      <h1 class="title">
+        コンテンツ検索
+      </h1>
+      <h2 class="subtitle">
+        <%= form_with url: root_path, method: :get, local: true do |form| %>
+          <div class="field">
+            <div class="control">
+              <%= form.text_field :s, value: search_str, class: "input", placeholder: "e.g 会社の住所", autofocus: true %>
+            </div>
+          </div>
+
+          <%= form.submit style: "display: none;" %>
+        <% end %>
+      </h2>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,7 @@
+.content-search-result {
+    padding: 3rem 1.5rem;
+
+    &--card {
+         margin-bottom: 1em;
+    }
+}

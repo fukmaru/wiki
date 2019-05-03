@@ -1,0 +1,24 @@
+<div class="content-search-result js-content-search-result">
+  <% contents.each do |content| %>
+    <div class="content-search-result--card js-content-search-result--card card">
+      <header class="card-header">
+        <p class="content-search-result--title js-content-search-result--title card-header-title">
+          <%= content.title.truncate(20) %>
+        </p>
+        <a href="#" class="card-header-icon" aria-label="more options">
+      <span class="icon">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+        </a>
+      </header>
+      <div class="card-content">
+        <div class="content-search-result--body js-content-search-result--body content">
+          <%= content.body.truncate(100) %>
+          <br>
+          <small>文字数: <%= content.body.present? ? content.body.gsub(" ", "").size : 0 %> |
+             <time><%= content.updated_at %></time></small>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
