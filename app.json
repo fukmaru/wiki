@@ -1,0 +1,14 @@
+{
+  "name": "wiki",
+  "description": "Rails Wiki System",
+  "website": "https://github.com/fukmaru/wiki",
+  "repository": "https://github.com/fukmaru/wiki",
+  "logo": "https://github.com/fukmaru/wiki/blob/master/public/icon_512x512.png",
+  "success_url": "/",
+  "keywords": [
+    "wiki",
+    "tool"],
+  "addons": [
+    "heroku-postgresql"
+  ]
+}
